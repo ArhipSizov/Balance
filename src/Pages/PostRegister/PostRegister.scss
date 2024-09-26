@@ -1,0 +1,38 @@
+.post_register{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding-top: 500px;
+    .top_img{
+        top: 0;
+        position: absolute;
+        width: 425px;
+        z-index: -1;
+    }
+    .telephone{
+        position: absolute;
+        z-index: 1;
+        top: 60px;
+        .telephone_11{
+            position: absolute;
+            margin: 0 auto;
+            width: 225px;
+            margin-left: 100px;
+        }
+        .telephone_12{
+            position: absolute;
+            margin: 0 auto;
+            z-index: 1;
+            margin-left: 115px;
+            margin-top: 159px;
+        }
+    }
+    .post_register_2{
+        background-color: #9F86FF;
+    }
+    p, h1{
+        margin-left: 25px;
+        width: 375px;
+    }
+}

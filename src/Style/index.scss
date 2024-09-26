@@ -5,7 +5,8 @@
 }
 #root {
   width: 425px;
-  padding: 16px;
+  display: block;
+  margin: auto;
   @font-face {
     font-family: "NotoSans";
     src: local("NotoSans"), url(../fonts/NotoSans.woff) format("woff");
@@ -14,7 +15,7 @@
     font-family: "Comfortaa";
     src: local("Comfortaa"), url(../fonts/Comfortaa.woff) format("woff");
   }
-  p {
+  p, h1, h2, a {
     font-family: "NotoSans", sans-serif;
   }
 }

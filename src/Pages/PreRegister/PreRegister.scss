@@ -1,0 +1,75 @@
+.pre_register {
+  .div {
+    .img {
+      transition: 2s;
+      display: block;
+      margin: 50px auto 20px auto;
+    }
+    h1 {
+      font-family: "Comfortaa", sans-serif !important;
+      text-align: center;
+      font-size: 48px;
+      font-weight: 700;
+    }
+    .img_alt{
+      margin-top: 150px;
+    }
+  }
+  .reg_or_log {
+    transition: 2s;
+    margin-top: 50px;
+    margin-left: -16px;
+    border-radius: 300px/100px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    min-height: 60vh;
+    width: 425px;
+    h1,
+    h2 {
+      color: #fff;
+      width: 325px;
+      margin-left: 50px;
+      text-align: center;
+    }
+    h1 {
+      padding-top: 30px;
+      font-size: 36px;
+      font-weight: 700;
+    }
+    h2{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 400;
+    }
+  }
+  .reg_or_log_alt{
+    margin-top: 600px;
+  }
+  .register_but{
+    margin-top: 50px;
+    margin-left: 60px;
+    width: 305px;
+    padding: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    p{
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+      }
+  }
+  .login_but{
+    background-color: black;
+    margin-top: 20px;
+    margin-left: 80px;
+    width: 265px;
+    padding: 16px;
+    border-radius: 100px;
+    cursor: pointer;
+    p{
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+      }
+  }
+}
