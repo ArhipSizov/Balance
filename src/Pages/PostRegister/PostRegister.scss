@@ -4,13 +4,16 @@
     top: 0;
     z-index: 10;
     padding-top: 500px;
-    .top_img{
+    .top_img, .bottom_img{
         top: 0;
         position: absolute;
         width: 425px;
         z-index: -1;
     }
-    .telephone{
+    .bottom_img{
+        top: 300px;
+    }
+    .telephone, .telephone_14{
         position: absolute;
         z-index: 1;
         top: 60px;
@@ -27,9 +30,17 @@
             margin-left: 115px;
             margin-top: 159px;
         }
+        .telephone_13{
+            position: absolute;
+            margin: 0 auto;
+            z-index: 1;
+            margin-left: 95px;
+            margin-top: 90px;
+        }
     }
-    .post_register_2{
-        background-color: #9F86FF;
+    .telephone_14{
+        width: 225px;
+        margin-left: 100px;
     }
     p, h1{
         margin-left: 25px;

@@ -39,7 +39,7 @@ export default function Register() {
         displayName: null,
         email: null,
       }).then(() => {
-        navigate("/profile");
+        navigate("/post_register");
       });
     });
     addUserDB({ email, password });
