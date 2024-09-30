@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 425px;
+  padding: 14px;
+  margin-left: -16px;
+  .big_block1 {
+    margin-left: 154px;
+    border-radius: 100px;
+    bottom: 7px;
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    .big_block2 {
+      border-radius: 100px;
+      margin: 7.5px;
+      padding: 25px;
+      width: 70px;
+      height: 70px;
+    }
+  }
+  .block {
+    width: 110px;
+    display: flex;
+    justify-content: space-between;
+    .img_alt{
+        display: none;
+    }
+    .active {
+        .img{
+            display: none;
+        }
+        .img_alt{
+            display: block;
+        }
+    }
+  }
+}

@@ -16,8 +16,8 @@ import { userArrAdd } from "../../Common/userArrAdd";
 import "./Register.scss";
 
 export default function Register() {
-  const [email, setEmail] = useState<string>();
-  const [password, setPassword] = useState<string>();
+  const [email, setEmail] = useState<any>();
+  const [password, setPassword] = useState<any>();
   const [type, setType] = useState<boolean>(true);
 
   const dispatch = useDispatch();
@@ -37,7 +37,6 @@ export default function Register() {
     createUserWithEmailAndPassword(auth, email, password).then(() => {
       updateProfile(auth.currentUser, {
         displayName: null,
-        email: null,
       }).then(() => {
         navigate("/post_register");
       });

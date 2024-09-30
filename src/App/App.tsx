@@ -12,13 +12,14 @@ import {
   Error,
   Loading,
   PreRegister,
-  PostRegister
-} from "./index.ts"
+  PostRegister,
+  Footer,
+} from "./index.ts";
 
 import "./App.scss";
 
 function App() {
-  const [theme] = useState<string>("dark");//lite
+  const [theme] = useState<string>("dark"); //lite
   const [showNavFooter, setShowNavFooter] = useState<boolean>(false);
   const [email, setIEmail] = useState<string>("");
 
@@ -68,7 +69,12 @@ function App() {
   }, []);
 
   if (!email && showNavFooter == true) {
-    return <Loading />;
+    return (
+      <div className="loading">
+        <img src="/loading.png" alt="" />
+        <p>Загрузка...</p>
+      </div>
+    );
   }
 
   return (
@@ -81,6 +87,7 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="*" element={<Error />} />
       </Routes>
+      {showNavFooter && <Footer />}
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Error from "../Pages/Error/Error";
 import Loading from "../Pages/Loading/Loading";
 import PreRegister from "../Pages/PreRegister/PreRegister";
 import PostRegister from "../Pages/PostRegister/PostRegister";
+import Footer from "../Components/Footer/Footer";
 
 export {
     Register,
@@ -11,5 +12,6 @@ export {
     Error,
     Loading,
     PreRegister,
-    PostRegister
+    PostRegister,
+    Footer
 }
