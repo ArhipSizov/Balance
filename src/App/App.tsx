@@ -14,6 +14,7 @@ import {
   PreRegister,
   PostRegister,
   Footer,
+  Profile
 } from "./index.ts";
 
 import "./App.scss";
@@ -84,6 +85,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
         <Route path="/post_register" element={<PostRegister />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="*" element={<Error />} />
       </Routes>

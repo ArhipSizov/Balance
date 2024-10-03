@@ -27,7 +27,7 @@ export default function Footer() {
           <img className="img" src="/footer/statistics.svg" alt="" />
           <img className="img_alt" src="/footer/statistics_alt.svg" alt="" />
         </NavLink>
-        <NavLink to="/ass5">
+        <NavLink to="/profile">
           <img className="img" src="/footer/profile.svg" alt="" />
           <img className="img_alt" src="/footer/profile_alt.svg" alt="" />
         </NavLink>
