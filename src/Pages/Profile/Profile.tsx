@@ -1,8 +1,17 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { signOut, getAuth } from "firebase/auth";
 
 import "./Profile.scss";
 
 export default function Profile() {
+  const auth = getAuth();
+  const navigate = useNavigate();
+
+  function signOutUser() {
+    signOut(auth).then(() => {
+      navigate("/pre_register");
+    });
+  }
   return (
     <div className="profile grey">
       <div className="profile_nav">
@@ -66,7 +75,9 @@ export default function Profile() {
           <p>Связаться</p>
         </div>
       </div>
-      <p className="exit second_color_p">Выйти</p>
+      <p onClick={signOutUser} className="exit second_color_p">
+        Выйти
+      </p>
     </div>
   );
 }
