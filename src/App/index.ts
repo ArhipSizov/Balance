@@ -6,6 +6,8 @@ import PreRegister from "../Pages/PreRegister/PreRegister";
 import PostRegister from "../Pages/PostRegister/PostRegister";
 import Footer from "../Components/Footer/Footer";
 import Profile from "../Pages/Profile/Profile";
+import Help from "../Pages/Help/Help";
+import Add from "../Pages/Add/Add";
 
 export {
     Register,
@@ -15,5 +17,7 @@ export {
     PreRegister,
     PostRegister,
     Footer,
-    Profile
+    Profile,
+    Help,
+    Add
 }

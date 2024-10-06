@@ -1,0 +1,90 @@
+.best,
+.good,
+.norm,
+.bad,
+.angry,
+.work {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 16px;
+  margin: 8px;
+  p {
+    display: inline;
+  }
+}
+.lite {
+  .best {
+    background-color: #ffe678a6;
+    p {
+      color: #87772f !important;
+    }
+  }
+  .good {
+    background-color: #c2eab7a6;
+    p {
+      color: #4b6544 !important;
+    }
+  }
+  .norm {
+    background-color: #cecece;
+    p {
+      color: #181818 !important;
+    }
+  }
+  .bad {
+    background-color: #83adff;
+    p {
+      color: #131313 !important;
+    }
+  }
+  .angry {
+    background-color: #ffa4a6;
+    p {
+      color: #181818 !important;
+    }
+  }
+  .work {
+    background-color: #9290a7;
+    p {
+      color: #fff !important;
+    }
+  }
+}
+.dark {
+  .best {
+    background-color: #c9a919;
+    p {
+      color: #181818 !important;
+    }
+  }
+  .good {
+    background-color: #c2eab7a6;
+    p {
+      color: #000000 !important;
+    }
+  }
+  .norm {
+    background-color: #9b9b9b;
+    p {
+      color: #181818 !important;
+    }
+  }
+  .bad {
+    background-color: #2b54a6d5;
+    p {
+      color: #eeeeee !important;
+    }
+  }
+  .angry {
+    background-color: #a63539d3;
+    p {
+      color: #eeeeee !important;
+    }
+  }
+  .work {
+    background-color: #71707d;
+    p {
+      color: #eeeeee !important;
+    }
+  }
+}

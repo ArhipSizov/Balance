@@ -9,7 +9,6 @@ export default function Login() {
   const [type, setType] = useState<boolean>(true);
   const [pasvord, setPasvord] = useState<string>("");
   const [email, setEmail] = useState<string>("");
-  console.log(email);
   
 
   const navigate = useNavigate();

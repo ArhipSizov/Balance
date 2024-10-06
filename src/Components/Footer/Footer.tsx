@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <div className="footer not_alt">
       <div className="big_block1 grey">
-        <NavLink to="/ass">
+        <NavLink to="/add">
           <div className="big_block2 second_color">
             <img className="plus" src="/footer/plus.svg" alt="" />
           </div>

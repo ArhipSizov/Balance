@@ -32,7 +32,8 @@
     width: 100%;
     border-radius: 16px;
     margin: 16px 0;
-    div{
+    div, a{
+      display: block;
       padding: 16px;
       p{
         display: inline-block;
@@ -45,11 +46,19 @@
     margin-top: 20px;
     text-align: center;
   }
+  .img_alt{
+    img{
+      width: 21px;
+    }
+  }
 }
 .lite{
   .profile{
     .img_alt{
       display: none;
+      img{
+        width: 20px;
+      }
     }
   }
 }

@@ -14,19 +14,29 @@ import {
   PreRegister,
   PostRegister,
   Footer,
-  Profile
+  Profile,
+  Help,
+  Add
 } from "./index.ts";
 
 import "./App.scss";
 
 function App() {
-  const [theme] = useState<string>("dark"); //lite
   const [showNavFooter, setShowNavFooter] = useState<boolean>(false);
   const [email, setIEmail] = useState<string>("");
 
   const auth = getAuth();
   const navigate = useNavigate();
 
+  
+  function getCookie(name:string) {
+    let matches = document.cookie.match(new RegExp(
+      "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+    ));
+    return matches ? decodeURIComponent(matches[1]) : "lite";
+  }
+  const [theme] = useState<any>(getCookie("theme")); //lite  dark
+  console.log( getCookie("theme") );
   let data = null;
   const database = getDatabase();
   const starCountRef = ref(database);
@@ -87,6 +97,8 @@ function App() {
         <Route path="/post_register" element={<PostRegister />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/loading" element={<Loading />} />
+        <Route path="/help" element={<Help />} />
+        <Route path="/add" element={<Add />} />
         <Route path="*" element={<Error />} />
       </Routes>
       {showNavFooter && <Footer />}

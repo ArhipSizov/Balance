@@ -4,6 +4,17 @@ import { signOut, getAuth } from "firebase/auth";
 import "./Profile.scss";
 
 export default function Profile() {
+  function getCookie(name: string) {
+    let matches = document.cookie.match(
+      new RegExp(
+        "(?:^|; )" +
+          name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, "\\$1") +
+          "=([^;]*)"
+      )
+    );
+    return matches ? decodeURIComponent(matches[1]) : undefined;
+  }
+
   const auth = getAuth();
   const navigate = useNavigate();
 
@@ -11,6 +22,15 @@ export default function Profile() {
     signOut(auth).then(() => {
       navigate("/pre_register");
     });
+  }
+
+  function customTheme() {
+    if (getCookie("theme") == "lite") {
+      document.cookie = "theme=dark";
+    } else {
+      document.cookie = "theme=lite";
+    }
+    location.reload();
   }
   return (
     <div className="profile grey">
@@ -36,9 +56,13 @@ export default function Profile() {
           <img src="/profile/notification_gray.svg" alt="" />
           <p>Напоминания</p>
         </div>
-        <div>
+        <div className="img" onClick={() => customTheme()}>
           <img src="/profile/moon.svg" alt="" />
           <p>Темная тема</p>
+        </div>
+        <div className="img_alt" onClick={() => customTheme()}>
+          <img src="/profile/sun.svg" alt="" />
+          <p>Светлая тема</p>
         </div>
       </div>
       <div className="block_profile not_alt">
@@ -62,10 +86,10 @@ export default function Profile() {
         </div>
       </div>
       <div className="block_profile not_alt">
-        <div>
+        <NavLink to="/help">
           <img src="/profile/qestion.svg" alt="" />
           <p>Поддержка</p>
-        </div>
+        </NavLink>
         <div>
           <img src="/profile/qestion_app.svg" alt="" />
           <p>О приложении</p>
