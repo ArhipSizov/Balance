@@ -1,5 +1,7 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { signOut, getAuth } from "firebase/auth";
+import { useState } from "react";
+import { useSelector } from "react-redux";
 
 import "./Profile.scss";
 
@@ -17,6 +19,17 @@ export default function Profile() {
 
   const auth = getAuth();
   const navigate = useNavigate();
+  
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+
+  const userArr = useSelector((state:any) => state.user.user);
+  if (email == "") {
+    userArr.forEach((element:any) => {
+      setEmail(element.email);
+      setName(element.name);
+    });
+  }
 
   function signOutUser() {
     signOut(auth).then(() => {
@@ -41,10 +54,10 @@ export default function Profile() {
       </div>
       <div className="profile_main">
         <img src="/profile/user_photo.png" alt="Ваше фото" />
-        <h1>name</h1>
-        <p>e-mail</p>
+        <h1>{name}</h1>
+        <p>{email}</p>
       </div>
-      <NavLink to="/ass993" className="redact_link second_color_p">
+      <NavLink to="/editing_profile" className="redact_link second_color_p">
         Редактировать профиль
       </NavLink>
       <div className="block_profile not_alt">

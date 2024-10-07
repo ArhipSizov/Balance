@@ -16,7 +16,8 @@ import {
   Footer,
   Profile,
   Help,
-  Add
+  Add,
+  EditingProfile
 } from "./index.ts";
 
 import "./App.scss";
@@ -36,7 +37,7 @@ function App() {
     return matches ? decodeURIComponent(matches[1]) : "lite";
   }
   const [theme] = useState<any>(getCookie("theme")); //lite  dark
-  console.log( getCookie("theme") );
+  
   let data = null;
   const database = getDatabase();
   const starCountRef = ref(database);
@@ -66,11 +67,10 @@ function App() {
                 email: item.email,
                 pasvord: item.password,
                 name: item.name,
-                number: item.number,
+                age: item.age,
+                family: item.family,
                 key: item.key,
-                favorites: item.favorites,
-                card: item.card,
-                rooms: item.rooms,
+                work: item.work
               })
             );
           }
@@ -90,11 +90,12 @@ function App() {
 
   return (
     <div className={theme}>
-      <Routes>
+      <Routes>EditingProfile
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
         <Route path="/post_register" element={<PostRegister />} />
+        <Route path="/editing_profile" element={<EditingProfile />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/help" element={<Help />} />

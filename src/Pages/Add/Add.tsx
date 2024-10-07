@@ -11,8 +11,6 @@ export default function Add() {
     date.toLocaleString("default", { month: "long" })
   );
 
-  console.log(moodDb);
-
   return (
     <div className="add grey">
       <div className="add_nav not_alt">

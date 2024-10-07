@@ -8,6 +8,7 @@ import Footer from "../Components/Footer/Footer";
 import Profile from "../Pages/Profile/Profile";
 import Help from "../Pages/Help/Help";
 import Add from "../Pages/Add/Add";
+import EditingProfile from "../Pages/EditingProfile/EditingProfile";
 
 export {
     Register,
@@ -19,5 +20,6 @@ export {
     Footer,
     Profile,
     Help,
-    Add
+    Add,
+    EditingProfile
 }

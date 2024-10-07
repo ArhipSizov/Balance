@@ -11,6 +11,11 @@ const slice = createSlice({
         id: new Date().toISOString(),
         email: action.payload.email,
         password: action.payload.pasvord,
+        name: action.payload.name,
+        age: action.payload.age,
+        family: action.payload.family,
+        key: action.payload.key,
+        work: action.payload.work
       });
     },
   },

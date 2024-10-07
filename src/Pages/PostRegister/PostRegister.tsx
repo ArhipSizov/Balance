@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import "./PostRegister.scss";
@@ -10,10 +10,6 @@ export default function PostRegister() {
   const [showReg4, setReg4] = useState<boolean>(false);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    console.log(12);
-  }, []);
 
   function next() {
     if (showReg1 == true) {
