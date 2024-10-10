@@ -103,14 +103,14 @@ export default function Profile() {
           <img src="/profile/qestion.svg" alt="" />
           <p>Поддержка</p>
         </NavLink>
-        <div>
+        <NavLink to="/post_register">
           <img src="/profile/qestion_app.svg" alt="" />
           <p>О приложении</p>
-        </div>
-        <div>
+        </NavLink>
+        <NavLink to="/help">
           <img src="/profile/contact.svg" alt="" />
           <p>Связаться</p>
-        </div>
+        </NavLink>
       </div>
       <p onClick={signOutUser} className="exit second_color_p">
         Выйти

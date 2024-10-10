@@ -17,7 +17,8 @@ import {
   Profile,
   Help,
   Add,
-  EditingProfile
+  EditingProfile,
+  Calendar
 } from "./index.ts";
 
 import "./App.scss";
@@ -34,7 +35,7 @@ function App() {
     let matches = document.cookie.match(new RegExp(
       "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
     ));
-    return matches ? decodeURIComponent(matches[1]) : "lite";
+    return matches ? decodeURIComponent(matches[1]) : "dark";
   }
   const [theme] = useState<any>(getCookie("theme")); //lite  dark
   
@@ -90,7 +91,7 @@ function App() {
 
   return (
     <div className={theme}>
-      <Routes>EditingProfile
+      <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
@@ -98,6 +99,7 @@ function App() {
         <Route path="/editing_profile" element={<EditingProfile />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/loading" element={<Loading />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="/help" element={<Help />} />
         <Route path="/add" element={<Add />} />
         <Route path="*" element={<Error />} />

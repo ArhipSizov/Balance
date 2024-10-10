@@ -1,0 +1,14 @@
+.calendar {
+  width: 425px;
+  margin-bottom: 100px;
+  min-height: 100vh;
+  margin: -16px;
+  padding: 16px;
+  .calendar_days {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    .block_week{
+      text-align: center;
+    }
+  }
+}

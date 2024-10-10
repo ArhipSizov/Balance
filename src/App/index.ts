@@ -9,6 +9,7 @@ import Profile from "../Pages/Profile/Profile";
 import Help from "../Pages/Help/Help";
 import Add from "../Pages/Add/Add";
 import EditingProfile from "../Pages/EditingProfile/EditingProfile";
+import Calendar from "../Pages/Calendar/Calendar";
 
 export {
     Register,
@@ -21,5 +22,6 @@ export {
     Profile,
     Help,
     Add,
-    EditingProfile
+    EditingProfile,
+    Calendar
 }

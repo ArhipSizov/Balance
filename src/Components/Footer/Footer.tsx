@@ -13,7 +13,7 @@ export default function Footer() {
         </NavLink>
       </div>
       <div className="block">
-        <NavLink to="/ass2">
+        <NavLink to="/calendar">
           <img className="img" src="/footer/book.svg" alt="" />
           <img className="img_alt" src="/footer/book_alt.svg" alt="" />
         </NavLink>
