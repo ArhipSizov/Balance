@@ -23,16 +23,13 @@ export default function Calendar() {
   for (let i = 0; i < date.getDay() - 1; i++) {
     newArr.push("");
   }
-  console.log(newArr);
-  useEffect(() => {
-    console.log(12);
-  }, [help]);
+  useEffect(() => {}, [help]);
 
   return (
     <div className="calendar grey">
       <div className="nav">
         <img
-        className="back"
+          className="back"
           onClick={() => {
             setHelp(help + 1);
           }}
@@ -41,7 +38,7 @@ export default function Calendar() {
         />
         <h1>{date.toLocaleString("default", { month: "long" })}</h1>
         <img
-        className="up"
+          className="up"
           onClick={() => {
             setHelp(help + 1);
             date.setMonth(date.getMonth() + 2);

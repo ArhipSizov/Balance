@@ -1,0 +1,41 @@
+.qwestion {
+  textarea {
+    resize: none;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    border-radius: 7px;
+    height: 90px;
+    background-color: #ffffff00;
+    margin-top: 12px;
+  }
+  a{
+    width: 160px;
+    padding: 14px;
+    border-radius: 100px;
+    margin: 0 auto;
+    margin-top: 36px;
+    display: block;
+    p{
+        text-align: center;
+    }
+  }
+}
+.dark {
+  .qwestion {
+    textarea {
+      border: #9ea0a7 1px solid;
+      color: #eeeeee;
+    }
+  }
+}
+.lite {
+  .qwestion {
+    textarea {
+      border: #ced2de 1px solid;
+    }
+  }
+}

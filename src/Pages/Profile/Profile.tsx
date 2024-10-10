@@ -62,10 +62,6 @@ export default function Profile() {
       </NavLink>
       <div className="block_profile not_alt">
         <div>
-          <img src="/profile/lock.svg" alt="" />
-          <p>Пин-код</p>
-        </div>
-        <div>
           <img src="/profile/notification_gray.svg" alt="" />
           <p>Напоминания</p>
         </div>
@@ -89,14 +85,14 @@ export default function Profile() {
         </div>
       </div>
       <div className="block_profile not_alt">
-        <div>
+        <NavLink to="/help">
           <img src="/profile/massage.svg" alt="" />
           <p>Написать отзыв</p>
-        </div>
-        <div>
+        </NavLink>
+        <NavLink to="/qwestion">
           <img src="/profile/survey.svg" alt="" />
           <p>Пройти опрос</p>
-        </div>
+        </NavLink>
       </div>
       <div className="block_profile not_alt">
         <NavLink to="/help">

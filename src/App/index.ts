@@ -10,6 +10,7 @@ import Help from "../Pages/Help/Help";
 import Add from "../Pages/Add/Add";
 import EditingProfile from "../Pages/EditingProfile/EditingProfile";
 import Calendar from "../Pages/Calendar/Calendar";
+import Qwestion from "../Pages/Qwestion/Qwestion";
 
 export {
     Register,
@@ -23,5 +24,6 @@ export {
     Help,
     Add,
     EditingProfile,
-    Calendar
+    Calendar,
+    Qwestion
 }

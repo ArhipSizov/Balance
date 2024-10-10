@@ -18,7 +18,8 @@ import {
   Help,
   Add,
   EditingProfile,
-  Calendar
+  Calendar,
+  Qwestion
 } from "./index.ts";
 
 import "./App.scss";
@@ -91,7 +92,7 @@ function App() {
 
   return (
     <div className={theme}>
-      <Routes>
+      <Routes>Qwestion
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
@@ -100,6 +101,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
         <Route path="/loading" element={<Loading />} />
         <Route path="/calendar" element={<Calendar />} />
+        <Route path="/qwestion" element={<Qwestion />} />
         <Route path="/help" element={<Help />} />
         <Route path="/add" element={<Add />} />
         <Route path="*" element={<Error />} />
