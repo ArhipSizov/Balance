@@ -7,8 +7,15 @@
   .calendar_days {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    .block_week{
+    .block_week {
       text-align: center;
+    }
+  }
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    .up {
+      rotate: 180deg;
     }
   }
 }
