@@ -1,0 +1,21 @@
+.mood {
+  width: 70px;
+  border-radius: 4px;
+  padding: 3px;
+  transition: 0.15s;
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    text-align: center;
+    transition: 0.15s;
+  }
+}
+.active_mood {
+    transition: 0.15s;
+    p{
+        font-size: 18px;
+        transition: 0.15s;
+    }
+}

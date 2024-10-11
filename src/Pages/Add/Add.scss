@@ -30,19 +30,9 @@
   .all_moods {
     display: flex;
     justify-content: space-between;
-    padding: 24px;
+    padding: 24px 12px;
     border-radius: 16px;
     margin-top: 12px;
-    .mood {
-      width: 56px;
-      img {
-        display: block;
-        margin: 0 auto;
-      }
-      p {
-        text-align: center;
-      }
-    }
   }
   .add_mood_but {
     width: 160px;
@@ -88,6 +78,15 @@
     background-color: #ffffff00;
     margin-top: 12px;
   }
+  .active{
+    background-color: rgba(0, 0, 0, 0) !important;
+  }
+  .error_p{
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    margin-top: 12px;
+  }
 }
 
 .lite {
@@ -100,6 +99,11 @@
     }
     textarea{
       border: #CED2DE 1px solid;
+    }
+    .active{
+      p{
+        color: #000 !important;
+      }
     }
   }
 }
@@ -114,6 +118,11 @@
     textarea{
       border: #9EA0A7 1px solid;
       color: #eeeeee;
+    }
+    .active{
+      p{
+        color: #fff !important;
+      }
     }
   }
 }

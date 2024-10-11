@@ -1,16 +1,58 @@
 import { useState } from "react";
-import db from "../../Common/db.json";
+import { useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { ref, update } from "firebase/database";
+import { database } from "../../Services/store/index";
+
+import db from "./mood.json";
 import AddBlock from "../../Components/AddBlock/AddBlock";
+import MoodImgBlock from "../../Components/MoodImgBlock/MoodImgBlock";
 
 import "./Add.scss";
 
 export default function Add() {
   const [date] = useState<any>(new Date());
   const [moodDb] = useState<any>(db.mood);
+  const [mood, setMood] = useState<any[]>([]);
+  const [work, setWork] = useState<any[]>([]);
+  const [description, setDescription] = useState<string>("");
+  const [error, setError] = useState<string>("none");
+  const [moodImg, setMoodImg] = useState<string>("none");
+  const [key, setKey] = useState("");
+
   const [monthName] = useState<string>(
     date.toLocaleString("default", { month: "long" })
   );
 
+  const navigate = useNavigate();
+  const userArr = useSelector((state: any) => state.user.user);
+  if (key == "") {
+    userArr.forEach((element: any) => {
+      setKey(element.key);
+    });
+  }
+  function updateDatabase() {
+    if (mood.length !== 0 && work.length !== 0 && moodImg !== "none") {
+      const updates: any = {};
+
+      const postData = {
+        mood: mood,
+        mood_img: moodImg,
+        work: work,
+        description: description,
+      };
+      console.log(postData);
+
+      updates["/users/" + key + "/mood/" + date] = postData;
+      navigate("/profile");
+      return update(ref(database), updates);
+    } else {
+      setError("error_p");
+      setTimeout(() => {
+        setError("none");
+      }, 4000);
+    }
+  }
   return (
     <div className="add grey">
       <div className="add_nav not_alt">
@@ -22,26 +64,15 @@ export default function Add() {
       </div>
       <h1>Как твое настроение?</h1>
       <div className="all_moods not_alt">
-        <div className="mood">
-          <img src="/mood/best.png" alt="" />
-          <p>Супер</p>
-        </div>
-        <div className="mood">
-          <img src="/mood/good.png" alt="" />
-          <p>Хорошо</p>
-        </div>
-        <div className="mood">
-          <img src="/mood/norm.png" alt="" />
-          <p>Норма</p>
-        </div>
-        <div className="mood">
-          <img src="/mood/bad.png" alt="" />
-          <p>Плохо</p>
-        </div>
-        <div className="mood">
-          <img src="/mood/angry.png" alt="" />
-          <p>Ужасно</p>
-        </div>
+        {db.mood_img.map((item: any) => (
+          <MoodImgBlock
+            setMoodImg={setMoodImg}
+            moodImg={moodImg}
+            {...item}
+            key={item.id}
+            item={item}
+          />
+        ))}
       </div>
       <h1>Что ты чувствовал/а?</h1>
       <h2 className="grey_p">
@@ -50,27 +81,62 @@ export default function Add() {
       <div className="blocks_mood not_alt">
         <div className="block_wt_moods">
           {moodDb.best.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="best" />
+            <AddBlock
+              setDays={setMood}
+              days={mood}
+              {...item}
+              key={item.id}
+              item={item}
+              class="best"
+            />
           ))}
         </div>
         <div className="block_wt_moods">
           {moodDb.good.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="good" />
+            <AddBlock
+              setDays={setMood}
+              days={mood}
+              {...item}
+              key={item.id}
+              item={item}
+              class="good"
+            />
           ))}
         </div>
         <div className="block_wt_moods">
           {moodDb.norm.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="norm" />
+            <AddBlock
+              setDays={setMood}
+              days={mood}
+              {...item}
+              key={item.id}
+              item={item}
+              class="norm"
+            />
           ))}
         </div>
         <div className="block_wt_moods">
           {moodDb.bad.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="bad" />
+            <AddBlock
+              setDays={setMood}
+              days={mood}
+              {...item}
+              key={item.id}
+              item={item}
+              class="bad"
+            />
           ))}
         </div>
         <div className="block_wt_moods">
           {moodDb.angry.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="angry" />
+            <AddBlock
+              setDays={setMood}
+              days={mood}
+              {...item}
+              key={item.id}
+              item={item}
+              class="angry"
+            />
           ))}
         </div>
       </div>
@@ -81,14 +147,28 @@ export default function Add() {
       <div className="blocks_mood not_alt">
         <div className="block_work ">
           {db.work.map((item: any) => (
-            <AddBlock {...item} key={item.id} item={item} class="work" />
+            <AddBlock
+              setDays={setWork}
+              days={work}
+              {...item}
+              key={item.id}
+              item={item}
+              class="work"
+            />
           ))}
         </div>
       </div>
       <h1>Заметки</h1>
       <h2 className="grey_p">Поделись своими чувствами и мыслями</h2>
-      <textarea></textarea>
-      <div className="add_mood_but second_color">
+      <textarea
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      ></textarea>
+      <p className={error}>Пожалуйста, выберите чувство и занятие</p>
+      <div
+        onClick={() => updateDatabase()}
+        className="add_mood_but second_color"
+      >
         <p>Сохранить</p>
       </div>
     </div>
