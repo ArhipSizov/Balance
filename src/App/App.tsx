@@ -19,7 +19,8 @@ import {
   Add,
   EditingProfile,
   Calendar,
-  Qwestion
+  Qwestion,
+  Meditation
 } from "./index.ts";
 
 import "./App.scss";
@@ -92,7 +93,7 @@ function App() {
 
   return (
     <div className={theme}>
-      <Routes>Qwestion
+      <Routes>
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
@@ -102,6 +103,7 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/qwestion" element={<Qwestion />} />
+        <Route path="/meditation" element={<Meditation />} />
         <Route path="/help" element={<Help />} />
         <Route path="/add" element={<Add />} />
         <Route path="*" element={<Error />} />

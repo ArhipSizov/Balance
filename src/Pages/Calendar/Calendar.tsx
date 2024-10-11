@@ -5,7 +5,7 @@ import BlockCalendar from "../../Components/BlockCalendar/BlockCalendar";
 import "./Calendar.scss";
 
 export default function Calendar() {
-  const [date, setDay] = useState<any>(new Date());
+  const [date] = useState<any>(new Date());
   const [help, setHelp] = useState<any>(0);
   let i = date.getDate();
   let newArr = [];

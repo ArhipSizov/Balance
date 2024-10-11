@@ -11,6 +11,7 @@ import Add from "../Pages/Add/Add";
 import EditingProfile from "../Pages/EditingProfile/EditingProfile";
 import Calendar from "../Pages/Calendar/Calendar";
 import Qwestion from "../Pages/Qwestion/Qwestion";
+import Meditation from "../Pages/Meditation/Meditation";
 
 export {
     Register,
@@ -25,5 +26,6 @@ export {
     Add,
     EditingProfile,
     Calendar,
-    Qwestion
+    Qwestion,
+    Meditation
 }

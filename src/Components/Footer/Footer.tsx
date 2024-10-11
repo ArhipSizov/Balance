@@ -17,7 +17,7 @@ export default function Footer() {
           <img className="img" src="/footer/book.svg" alt="" />
           <img className="img_alt" src="/footer/book_alt.svg" alt="" />
         </NavLink>
-        <NavLink to="/ass3">
+        <NavLink to="/meditation">
           <img className="img" src="/footer/brain.svg" alt="" />
           <img className="img_alt" src="/footer/brain_alt.svg" alt="" />
         </NavLink>
