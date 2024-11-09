@@ -1,0 +1,46 @@
+.nav_therapys {
+  .nav_p_meditation {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  .meditation_nav_all {
+    width: 425px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    margin-top: 12px;
+    margin-left: -16px;
+    padding: 0 16px;
+    .meditation_nav {
+      width: 540px;
+      display: flex;
+      justify-content: space-between;
+      .meditation_nav_block {
+        display: inline-block;
+        padding: 8px 20px;
+        border-radius: 100px;
+      }
+      .active{
+        p{
+            color: #fff;
+        }
+      }
+    }
+  }
+  .meditation_nav_all::-webkit-scrollbar {
+    height: 0;
+  }
+}
+.dark{
+    .nav_therapys{
+        .active{
+            background-color: #5e44bf !important;
+        }
+    }
+}
+.lite{
+    .nav_therapys{
+        .active{
+            background-color: #5124ff !important;
+        }
+    }
+}

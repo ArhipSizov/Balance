@@ -21,9 +21,21 @@ export default function Calendar() {
     }
   }
   for (let i = 0; i < date.getDay() - 1; i++) {
+    console.log(date.toLocaleString("default", { week: "long" }));
     newArr.push("");
+    console.log(newArr);
   }
-  useEffect(() => {}, [help]);
+    let a = date.getDay();
+    let el = document.querySelectorAll("p.bad_p");
+    const b = el.length
+    let c = a - b
+    console.log(c);
+    el.forEach((item: any) => {
+      if (c <= 0) {
+        item.remove();
+        c -= c;
+      }
+    });
 
   return (
     <div className="calendar grey">
@@ -36,7 +48,10 @@ export default function Calendar() {
           src="/back.svg"
           alt=""
         />
-        <h1>{date.toLocaleString("default", { month: "long" })}</h1>
+        <h1>
+          {date.toLocaleString("default", { month: "long" })}{" "}
+          {date.getFullYear()}
+        </h1>
         <img
           className="up"
           onClick={() => {

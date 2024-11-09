@@ -12,6 +12,10 @@ import EditingProfile from "../Pages/EditingProfile/EditingProfile";
 import Calendar from "../Pages/Calendar/Calendar";
 import Qwestion from "../Pages/Qwestion/Qwestion";
 import Meditation from "../Pages/Meditation/Meditation";
+import Lectures from "../Pages/Lectures/Lectures"
+import Therapists from "../Pages/Therapists/Therapists"
+import Webinars from "../Pages/Webinars/Webinars"
+import LecturesFullBlock from "../Pages/LecturesFullBlock/LecturesFullBlock";
 
 export {
     Register,
@@ -27,5 +31,9 @@ export {
     EditingProfile,
     Calendar,
     Qwestion,
-    Meditation
+    Meditation,
+    Lectures,
+    Therapists,
+    Webinars,
+    LecturesFullBlock
 }

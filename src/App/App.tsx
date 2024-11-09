@@ -20,7 +20,11 @@ import {
   EditingProfile,
   Calendar,
   Qwestion,
-  Meditation
+  Meditation,
+  Lectures,
+  Therapists,
+  Webinars,
+  LecturesFullBlock
 } from "./index.ts";
 
 import "./App.scss";
@@ -28,6 +32,7 @@ import "./App.scss";
 function App() {
   const [showNavFooter, setShowNavFooter] = useState<boolean>(false);
   const [email, setIEmail] = useState<string>("");
+  const [idLecture, setIdLecture] = useState<string>("");
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -104,6 +109,10 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/qwestion" element={<Qwestion />} />
         <Route path="/meditation" element={<Meditation />} />
+        <Route path="/lectures" element={<Lectures setIdLecture={setIdLecture}/>} />
+        <Route path="/lecturesfullblock" element={<LecturesFullBlock idLecture={idLecture}/>} />
+        <Route path="/therapists" element={<Therapists />} />
+        <Route path="/webinars" element={<Webinars />} />
         <Route path="/help" element={<Help />} />
         <Route path="/add" element={<Add />} />
         <Route path="*" element={<Error />} />
