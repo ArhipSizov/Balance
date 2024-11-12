@@ -4,7 +4,6 @@ import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function LecturesFullBlock(item: any) {
-  console.log(item);
   const [id, setId] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [description, setDescription] = useState<string>("");

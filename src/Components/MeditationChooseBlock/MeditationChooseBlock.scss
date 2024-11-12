@@ -1,0 +1,36 @@
+.meditation_choose_block {
+  margin-bottom: 170px;
+  .back_img {
+    position: absolute;
+    width: 398px;
+    height: 253px;
+  }
+  .meditation_choose_block {
+    padding: 16px;
+    position: relative;
+    display: block;
+    width: 398px;
+    border-radius: 16px;
+    z-index: 12;
+    backdrop-filter: blur(5px);
+    top: 151px;
+    h2{
+        font-size: 20px;
+        font-weight: 500;
+        margin-bottom: 19px;
+        color: #fff;
+    }
+    div{
+        display: inline-flex;
+        justify-content: space-between;
+        margin-right: 27px;
+        img{
+            margin-right: 8px;
+        }
+        p{
+            display: inline;
+            color: #fff;
+        }
+    }
+  }
+}

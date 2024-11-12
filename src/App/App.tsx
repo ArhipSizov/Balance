@@ -24,7 +24,8 @@ import {
   Lectures,
   Therapists,
   Webinars,
-  LecturesFullBlock
+  LecturesFullBlock,
+  MeditationChoose
 } from "./index.ts";
 
 import "./App.scss";
@@ -33,6 +34,7 @@ function App() {
   const [showNavFooter, setShowNavFooter] = useState<boolean>(false);
   const [email, setIEmail] = useState<string>("");
   const [idLecture, setIdLecture] = useState<string>("");
+  const [idMeditation, setIdMeditation] = useState<string>("");
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -108,7 +110,8 @@ function App() {
         <Route path="/loading" element={<Loading />} />
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/qwestion" element={<Qwestion />} />
-        <Route path="/meditation" element={<Meditation />} />
+        <Route path="/meditation" element={<Meditation setIdMeditation={setIdMeditation}/>} />
+        <Route path="/meditationchoose" element={<MeditationChoose idMeditation={idMeditation}/>} />
         <Route path="/lectures" element={<Lectures setIdLecture={setIdLecture}/>} />
         <Route path="/lecturesfullblock" element={<LecturesFullBlock idLecture={idLecture}/>} />
         <Route path="/therapists" element={<Therapists />} />

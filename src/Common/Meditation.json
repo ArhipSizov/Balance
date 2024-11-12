@@ -1,0 +1,67 @@
+[
+  {
+    "img": "/meditation/sleeping.png",
+    "name": "Для сна",
+    "description": "Расслабление и улучшение сна",
+    "id": "1"
+  },
+  {
+    "img": "/meditation/balance.png",
+    "name": "На работе/учебе",
+    "description": "Быстрая медитация для перезагрузки",
+    "id": "2"
+  },
+  {
+    "img": "/meditation/lotus.png",
+    "name": "Глубокая медитация",
+    "description": "Длительная медитация для погружения в себя",
+    "id": "3"
+  },
+  {
+    "img": "/meditation/music.png",
+    "name": "Музыкальная",
+    "description": "Улучшает настроение, снижает стресс, улучшает самочувствие",
+    "id": "4"
+  },
+  {
+    "img": "/meditation/stress.png",
+    "name": " Для снижения стресса",
+    "description": "Повышает стрессоустойчивость",
+    "id": "5"
+  },
+  {
+    "img": "/meditation/confuse.png",
+    "name": "Для новичков",
+    "description": "Обучающий материал",
+    "id": "6",
+    "music": [
+      {
+        "img": "/meditation/for_new/forest/litl.png",
+        "name": "Звуки природы",
+        "type": [
+          { "name": "Запись", "img": "/meditation/type/micro.svg" },
+          { "name": "10 мин", "img": "/meditation/type/time.svg" }
+        ],
+        "id":"1"
+      },
+      {
+        "img": "/meditation/for_new/stress/litl.png",
+        "name": "Снятие стресса",
+        "type": [
+          { "name": "Запись", "img": "/meditation/type/micro.svg" },
+          { "name": "15 мин", "img": "/meditation/type/time.svg" }
+        ],
+        "id":"2"
+      },
+      {
+        "img": "/meditation/for_new/relax/litl.png",
+        "name": "Релаксация",
+        "type": [
+          { "name": "Запись", "img": "/meditation/type/micro.svg" },
+          { "name": "20 мин", "img": "/meditation/type/time.svg" }
+        ],
+        "id":"3"
+      }
+    ]
+  }
+]
