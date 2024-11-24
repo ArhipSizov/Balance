@@ -41,7 +41,6 @@ export default function EditingProfile() {
       key: key,
       name: name,
     };
-    console.log(postData);
 
     updates["/users/" + key] = postData;
     navigate("/profile");

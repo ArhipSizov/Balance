@@ -8,12 +8,10 @@ export default function MeditationChoose(i: any) {
   const [id, setId] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [newDb, setNewDb] = useState<any[]>([]);
-  console.log(newDb);
   
 
   db.forEach((element: any) => {
     if (element.id == i.idMeditation && id == "") {
-        console.log(element);
         setNewDb(element.music)
         setId(element.id);
         setName(element.name);

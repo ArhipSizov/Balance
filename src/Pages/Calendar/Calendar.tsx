@@ -21,15 +21,12 @@ export default function Calendar() {
     }
   }
   for (let i = 0; i < date.getDay() - 1; i++) {
-    console.log(date.toLocaleString("default", { week: "long" }));
     newArr.push("");
-    console.log(newArr);
   }
     let a = date.getDay();
     let el = document.querySelectorAll("p.bad_p");
     const b = el.length
     let c = a - b
-    console.log(c);
     el.forEach((item: any) => {
       if (c <= 0) {
         item.remove();

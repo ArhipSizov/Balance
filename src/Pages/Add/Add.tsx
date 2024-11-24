@@ -41,7 +41,6 @@ export default function Add() {
         work: work,
         description: description,
       };
-      console.log(postData);
 
       updates["/users/" + key + "/mood/" + date] = postData;
       navigate("/profile");

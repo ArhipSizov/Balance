@@ -1,7 +1,6 @@
 import "./MeditationChooseBlock.scss";
 
 export default function MeditationChooseBlock(i: any) {
-  console.log(i);
 
   return (
     <div className="meditation_choose_block">
