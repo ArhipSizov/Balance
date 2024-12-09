@@ -1,4 +1,28 @@
 .webinars_full_block{
+    padding-bottom: 200px;
+    .show_modal{
+        position: absolute;
+        margin: -16px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        padding-top: 200px;
+        h1{
+            font-size: 42px;
+        }
+    }
+    .footer_webinars{
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 393px;
+        bottom: 60px;
+        .button{
+            border-radius: 100px;
+            padding: 11px 30px;
+        }
+    }
     .back_img{
         position: absolute;
         margin-top: 8px;
