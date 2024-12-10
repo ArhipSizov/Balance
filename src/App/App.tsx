@@ -26,7 +26,8 @@ import {
   Webinars,
   LecturesFullBlock,
   MeditationChoose,
-  WebinarsFullBlock
+  WebinarsFullBlock,
+  TherapistsFullBlock
 } from "./index.ts";
 
 import "./App.scss";
@@ -37,6 +38,7 @@ function App() {
   const [idLecture, setIdLecture] = useState<string>("");
   const [idMeditation, setIdMeditation] = useState<string>("");
   const [idWebinars, setIdWebinars] = useState<string>("");
+  const [idTherapists, setIdTherapists] = useState<string>("");
 
   const auth = getAuth();
   const navigate = useNavigate();
@@ -116,7 +118,8 @@ function App() {
         <Route path="/meditationchoose" element={<MeditationChoose idMeditation={idMeditation}/>} />
         <Route path="/lectures" element={<Lectures setIdLecture={setIdLecture}/>} />
         <Route path="/lecturesfullblock" element={<LecturesFullBlock idLecture={idLecture}/>} />
-        <Route path="/therapists" element={<Therapists />} />
+        <Route path="/therapists" element={<Therapists setIdTherapists={setIdTherapists}/>} />
+        <Route path="/therapistsFullBlock" element={<TherapistsFullBlock idTherapists={idTherapists}/>} />
         <Route path="/webinars" element={<Webinars setIdWebinars={setIdWebinars}/>} />
         <Route path="/webinarsfullblock" element={<WebinarsFullBlock idWebinars={idWebinars}/>} />
         <Route path="/help" element={<Help />} />

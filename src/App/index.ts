@@ -18,6 +18,7 @@ import Webinars from "../Pages/Webinars/Webinars"
 import LecturesFullBlock from "../Pages/LecturesFullBlock/LecturesFullBlock";
 import MeditationChoose from "../Pages/MeditationChoose/MeditationChoose";
 import WebinarsFullBlock from "../Pages/WebinarsFullBlock/WebinarsFullBlock";
+import TherapistsFullBlock from "../Pages/TherapistsFullBlock/TherapistsFullBlock"
 
 export {
     Register,
@@ -39,5 +40,6 @@ export {
     Webinars,
     LecturesFullBlock,
     MeditationChoose,
-    WebinarsFullBlock
+    WebinarsFullBlock,
+    TherapistsFullBlock
 }

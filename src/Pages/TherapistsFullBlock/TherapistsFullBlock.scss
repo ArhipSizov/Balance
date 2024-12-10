@@ -1,0 +1,72 @@
+.therapists_full_block{
+    margin: -16px;
+    width: 425px;
+    padding: 16px;
+    padding-bottom: 150px;
+    min-height: 100vh;
+    .logo{
+        position: absolute;
+        left: 110px;
+        width: 205px;
+        border-radius: 100px;
+    }
+    .show_modal{
+        position: fixed;
+        margin: -16px;
+        z-index: 1000;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        padding-top: 200px;
+        h1{
+            text-align: center;
+            font-size: 42px;
+        }
+    }
+    .button{
+        border-radius: 100px;
+        padding: 11px 30px;
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        width: 393px;
+        bottom: 100px;
+        p{
+            text-align: center;
+            width: 100%;
+        }
+    }
+    .main_therapists_full_block{
+        width: 253px;
+        margin-left: 70px;
+        margin-top: 200px;
+        text-align: center;
+        .experience_type{
+            display: flex;
+            justify-content: space-between;
+            margin: 12px 0 8px 0;
+            p{
+                padding: 8px 14px;
+                border-radius: 100px;
+            }
+        }
+        .rating{
+            display: flex;
+            justify-content: space-between;
+            width: 57px;
+            margin: 16px  0 0 98px;
+            p{
+                font-size: 20px;
+                font-weight: 700;
+            }
+        }
+    }
+    .description{
+        border-radius: 16px;
+        padding: 16px;
+        margin-top: 16px;
+        h2{
+            margin-top: 12px;
+        }
+    }
+}
