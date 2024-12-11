@@ -8,26 +8,24 @@ export default function MeditationChoose(i: any) {
   const [id, setId] = useState<string>("");
   const [name, setName] = useState<string>("");
   const [newDb, setNewDb] = useState<any[]>([]);
-  
 
   db.forEach((element: any) => {
     if (element.id == i.idMeditation && id == "") {
-        setNewDb(element.music)
-        setId(element.id);
-        setName(element.name);
+      setNewDb(element.music);
+      setId(element.id);
+      setName(element.name);
     }
   });
 
   return (
-    <NavLink to="/meditation" className="meditation_choose">
-      <img className="back_img" src="/back.svg" alt="" />
-      <h1>{name}</h1>
-    {newDb.map((item: any) => (
-        <MeditationChooseBlock
-          {...item}
-          key={item.id}
-        />
+    <div className="meditation_choose">
+      <NavLink to="/meditation">
+        <img className="back_img" src="/back.svg" alt="" />
+        <h1>{name}</h1>
+      </NavLink>
+      {newDb.map((item: any) => (
+        <MeditationChooseBlock setIdMusic={i.setIdMusic} {...item} key={item.id} />
       ))}
-    </NavLink>
+    </div>
   );
 }

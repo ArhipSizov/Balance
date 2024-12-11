@@ -13,12 +13,4 @@ export const addUserDB = (userData: any) => {
       work: ""
     };
     ref.set(dataWithKey);
-    // userDB(newKey);
   }
-
-  // async function userDB(newKey: any) {
-  //   const onjectUser = {
-  //     key: newKey,
-  //   };
-  //   let json = JSON.stringify(onjectUser);
-  // }

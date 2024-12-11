@@ -42,6 +42,7 @@
           { "name": "Запись", "img": "/meditation/type/micro.svg" },
           { "name": "10 мин", "img": "/meditation/type/time.svg" }
         ],
+        "music":"/src/assets/qala.mp3",
         "id":"1"
       },
       {
@@ -51,6 +52,7 @@
           { "name": "Запись", "img": "/meditation/type/micro.svg" },
           { "name": "15 мин", "img": "/meditation/type/time.svg" }
         ],
+        "music":"/src/assets/qala.mp3",
         "id":"2"
       },
       {
@@ -60,6 +62,7 @@
           { "name": "Запись", "img": "/meditation/type/micro.svg" },
           { "name": "20 мин", "img": "/meditation/type/time.svg" }
         ],
+        "music":"/src/assets/qala.mp3",
         "id":"3"
       }
     ]

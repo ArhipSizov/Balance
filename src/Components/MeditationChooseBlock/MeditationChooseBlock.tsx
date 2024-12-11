@@ -1,9 +1,9 @@
+import { NavLink } from "react-router-dom";
 import "./MeditationChooseBlock.scss";
 
 export default function MeditationChooseBlock(i: any) {
-
   return (
-    <div className="meditation_choose_block">
+    <NavLink onClick={()=>i.setIdMusic(i.id)} to="/player" className="meditation_choose_block">
       <img className="back_img" src={i.img} alt="" />
       <div className="meditation_choose_block">
         <h2>{i.name}</h2>
@@ -14,6 +14,6 @@ export default function MeditationChooseBlock(i: any) {
           </div>
         ))}
       </div>
-    </div>
+    </NavLink>
   );
 }

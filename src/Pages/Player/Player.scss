@@ -1,0 +1,51 @@
+.component {
+  width: 100%;
+  max-width: 600px;
+  margin: 1em auto;
+  padding-bottom: 2em;
+  border-radius: 10px;
+  .musicCover {
+    margin-left: 100px;
+    width: 193px;
+  }
+  .player_play{
+    margin-left: 130px;
+    width:133px;
+    display: flex;
+    justify-content: space-between;
+  }
+  h1, h2{
+    text-align: center;
+    margin: 16px 0;
+  }
+  .playButton {
+    background: none;
+    border: none;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .subTitle {
+    margin-top: -1em;
+    color: #4f4f4f;
+  }
+
+  .time {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    color: #828282;
+    font-size: smaller;
+  }
+
+  .timeline {
+    margin-left: 5%;
+    width: 90%;
+    background-color: #27ae60;
+  }
+
+  input[type="range"] {
+    background-color: #27ae60;
+  }
+}

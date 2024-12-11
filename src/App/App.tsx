@@ -27,7 +27,8 @@ import {
   LecturesFullBlock,
   MeditationChoose,
   WebinarsFullBlock,
-  TherapistsFullBlock
+  TherapistsFullBlock,
+  Player
 } from "./index.ts";
 
 import "./App.scss";
@@ -37,6 +38,7 @@ function App() {
   const [email, setIEmail] = useState<string>("");
   const [idLecture, setIdLecture] = useState<string>("");
   const [idMeditation, setIdMeditation] = useState<string>("");
+  const [idMusic, setIdMusic] = useState<string>("");
   const [idWebinars, setIdWebinars] = useState<string>("");
   const [idTherapists, setIdTherapists] = useState<string>("");
 
@@ -104,7 +106,7 @@ function App() {
 
   return (
     <div className={theme}>
-      <Routes>
+      <Routes>Player
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pre_register" element={<PreRegister />} />
@@ -115,7 +117,8 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/qwestion" element={<Qwestion />} />
         <Route path="/meditation" element={<Meditation setIdMeditation={setIdMeditation}/>} />
-        <Route path="/meditationchoose" element={<MeditationChoose idMeditation={idMeditation}/>} />
+        <Route path="/meditationchoose" element={<MeditationChoose setIdMusic={setIdMusic} idMeditation={idMeditation}/>} />
+        <Route path="/player" element={<Player idPlayer={idMusic} idMeditation={idMeditation}/>} />
         <Route path="/lectures" element={<Lectures setIdLecture={setIdLecture}/>} />
         <Route path="/lecturesfullblock" element={<LecturesFullBlock idLecture={idLecture}/>} />
         <Route path="/therapists" element={<Therapists setIdTherapists={setIdTherapists}/>} />
